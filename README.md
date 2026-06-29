@@ -1,4 +1,4 @@
-🛒 # **Predictive Markdown Intelligence**
+🛒   #**Predictive Markdown Intelligence**
 
 **End-to-End Machine Learning for Retail Demand Forecasting & Markdown Optimization
 Predicting SKU-level daily demand using synthetic retail data, feature engineering, and gradient boosted tree models to support smarter pricing and inventory decisions.**
