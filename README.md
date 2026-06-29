@@ -1,14 +1,15 @@
-🛒 Predictive Markdown Intelligence
-End-to-End Machine Learning for Retail Demand Forecasting & Markdown Optimization
-Predicting SKU-level daily demand using synthetic retail data, feature engineering, and gradient boosted tree models to support smarter pricing and inventory decisions.
+🛒 # **Predictive Markdown Intelligence**
+
+**End-to-End Machine Learning for Retail Demand Forecasting & Markdown Optimization
+Predicting SKU-level daily demand using synthetic retail data, feature engineering, and gradient boosted tree models to support smarter pricing and inventory decisions.**
 
 
 
 
 
 
-📖 Overview
-Retail markdown decisions are difficult because lowering prices increases demand while reducing margins.
+📖 #**Overview**
+**Retail markdown decisions are difficult because lowering prices increases demand while reducing margins***.
 
 This project simulates a realistic fashion retail environment and develops an end-to-end machine learning pipeline that predicts daily SKU demand under different pricing conditions.
 
@@ -18,23 +19,29 @@ The final objective is to support better:
 💰 Markdown timing
 📈 Demand forecasting
 🛍 Retail pricing decisions
-🚀 Project Highlights
-✅ Synthetic retail data generation
 
-✅ Leakage-free feature engineering
 
-✅ Multiple baseline models
+# **🚀 Project Highlights**
 
-✅ XGBoost Tweedie optimization
+**✅ Synthetic retail data generation**
 
-✅ Error analysis
+**✅ Leakage-free feature engineering**
 
-✅ Deployment-ready prediction pipeline
+**✅ Multiple baseline models**
 
-✅ Professional GitHub documentation
+**✅ XGBoost Tweedie optimization**
 
-🏗 Repository Structure
-Predictive-Markdown-Intelligence/
+**✅ Error analysis**
+
+**✅ Deployment-ready prediction pipeline**
+
+**✅ Professional GitHub documentation**
+
+**🏗 Repository Structure**
+
+
+
+#**Predictive-Markdown-Intelligence/**
 
 │
 ├── data/
@@ -60,14 +67,21 @@ Predictive-Markdown-Intelligence/
 ├── visualize_data.py
 │
 └── README.md
-📊 Dataset
-The synthetic retail dataset contains approximately
+
+
+📊 # **Dataset**
+
+
+**The synthetic retail dataset contains approximately**
+
 
 260,000+ SKU-Day observations
 180 Fashion SKUs
 2 Years of Daily Sales
 Multiple Product Categories
-The data was intentionally designed to reproduce real retail characteristics including
+
+
+**The data was intentionally designed to reproduce real retail characteristics including**
 
 Zero-inflated demand
 Long-tail sales
@@ -90,69 +104,95 @@ Day of week
 Holiday indicators
 Future information leakage was removed before model training.
 
-🤖 Models
+🤖  # **Models**
+
 The project compares several machine learning models.
 
-Model	Purpose
+
+
+# **Model	Purpose**
+
 Linear Regression	Baseline
 Random Forest	Non-linear benchmark
 XGBoost	Gradient boosting
 XGBoost Poisson	Count prediction
-✅ XGBoost Tweedie	Final production model
-📈 Final Model
+
+
+✅ # **XGBoost Tweedie	Final production model**
+
+
+
+📈 # **Final Model**
 The selected production model is
 
-✅ XGBoost Tweedie
+✅ # **XGBoost Tweedie**
+
+
 Chosen because it naturally models
 
 Sparse demand
 Long-tail purchases
 Zero inflation
 Stable expected demand
-📉 Evaluation
+
+
+
+📉 # **Evaluation**
+
+
 Evaluation includes
 
-RMSE
+**RMSE
 MAE
 RMSLE
 Residual analysis
 SKU-level diagnostics
 Metric Scale
-The validation data is approximately 99.99% zero demand.
+The validation data is approximately 99.99% zero demand**.
 
 Therefore:
 
-average demand is extremely small
+_average demand is extremely small
 RMSE values appear numerically small
 metrics are reported on the original units sold scale
-This behavior is expected for highly sparse retail demand forecasting.
+This behavior is expected for highly sparse retail demand forecasting._****
 
-🚀 Deployment
-Deployment artifacts include
+**🚀 Deployment
+Deployment artifacts include**
+
 
 trained Tweedie model
 feature ordering
 preprocessing pipeline
 The project also contains notebook-based deployment preparation for future API integration.
 
-💡 Business Value
-A retailer using this system could
 
-reduce stockouts
+**💡 Business Value
+A retailer using this system could**
+
+**reduce stockouts
 reduce overstocks
 improve markdown timing
 improve inventory allocation
 increase gross margin
-reduce inventory waste
-🔮 Future Improvements
-SHAP Explainability
+reduce inventory waste**__
+
+
+
+**_🔮 Future Improvements**
+
+_SHAP Explainability
 FastAPI Deployment
 Docker Container
 Markdown Optimization Engine
 Reinforcement Learning Pricing
-Real Retail Data Validation
-🧑‍💻 Author
+Real Retail Data Validation__
+
+
+
+
+**🧑‍💻 Author
 John Kirima
 Business Analytics & Information Systems
 
-Machine Learning • Data Science • AI Engineering
+Machine Learning • Data Science • AI Engineering**
