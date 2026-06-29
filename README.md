@@ -179,7 +179,7 @@ reduce inventory waste**__
 
 
 
-**_🔮 Future Improvements**
+🔮 **Future Improvements**
 
 _SHAP Explainability
 FastAPI Deployment
@@ -191,8 +191,12 @@ Real Retail Data Validation__
 
 
 
-**🧑‍💻 Author
-John Kirima
-Business Analytics & Information Systems
+#**🧑‍💻 Author**
+
+
+**John Kirima**
+
+
+**Business Analytics & Information Systems**
 
 Machine Learning • Data Science • AI Engineering**
