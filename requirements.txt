@@ -1,0 +1,33 @@
+# ============================================================================
+# Predictive Markdown Intelligence — Project Dependencies
+# ============================================================================
+# Python 3.11+ recommended.
+# Versions are pinned at the major level with ~= so pip is free to pull
+# compatible minor/patch updates (e.g. pandas~=2.2.0 accepts >=2.2.0, <2.3.0).
+# Install with:  pip install -r requirements.txt
+# ============================================================================
+
+# --- Data manipulation -------------------------------------------------------
+pandas~=2.2.0
+numpy~=1.26.0
+
+# --- Machine learning --------------------------------------------------------
+scikit-learn~=1.5.0
+xgboost~=2.1.0
+
+# --- Visualization -----------------------------------------------------------
+matplotlib~=3.9.0
+seaborn~=0.13.0
+
+# --- Model serialization -----------------------------------------------------
+joblib~=1.4.0
+
+# --- Interpretability (Notebook 09 — SHAP explanations) ----------------------
+shap~=0.46.0
+
+# --- Optimization (Markdown pricing optimization layer) ----------------------
+pulp~=2.9.0
+
+# --- Jupyter / notebook runtime ----------------------------------------------
+notebook~=7.2.0
+ipykernel~=6.29.0
