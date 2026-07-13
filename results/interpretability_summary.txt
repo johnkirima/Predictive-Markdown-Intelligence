@@ -1,0 +1,24 @@
+Interpretability & Deployment
+
+Key drivers of markdown demand. Both native XGBoost gain and SHAP agree on the story a buyer would expect:
+the strongest predictors are a product's own recent sales momentum (rolling_7d_avg, lag_7 / lag_14), its
+lifecycle position (days_since_launch, days_to_season_end), and the commercial levers the business controls
+(discount_pct, markdown_stage, inventory_ratio). The top five features by gain were: rolling_7d_avg, days_since_launch, lag_7_units_sold, markdown_stage, discount_pct.
+
+Interpretability insights. SHAP waterfall plots confirm the model reasons sensibly case-by-case: high-momentum,
+early-lifecycle SKUs are pushed up toward large forecasts, while faded, late-season, low-inventory SKUs are pulled
+toward zero — the zero-inflation behaviour the Tweedie objective was chosen for. This directional agreement between
+a global (gain) and a local (SHAP) method is what makes the model trustworthy for real markdown decisions, not
+just accurate on a held-out set (WMAE 4.52, MAE 2.97 on unseen SKUs).
+
+Where it struggles. Error analysis on held-out SKUs shows absolute error concentrates in the highest-velocity
+pockets — the "21-40%" discount tier and "0-30d" SKU-age bucket — with a mild tendency to under-forecast
+demand spikes. (The deepest-markdown and oldest buckets show low error only because demand there has decayed to
+near-zero.) The recommended mitigation is to pair the point forecast with the P90 quantile (from NB08) for these
+high-velocity, newly-launched SKUs, where under-ordering is most costly.
+
+Deployment considerations. The model ships as a ~0.8 MB XGBoost artifact behind a single predict_demand() entry
+point that enforces the 24-feature contract and clips forecasts to be non-negative. Production readiness rests on
+the feature pipeline (leakage-safe lags, complete one-hot vocabularies) rather than the model itself. A six-signal
+monitoring plan (prediction/feature drift via PSI, rolling WMAE vs. the 5.0 baseline, segment bias, cold-start
+volume, and data freshness) triggers a cheap retrain when WMAE breaches baseline or prediction PSI exceeds 0.25.

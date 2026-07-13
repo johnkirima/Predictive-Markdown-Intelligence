@@ -1,0 +1,7 @@
+Monitor,Metric,Alert threshold,Likely cause / action
+Prediction drift,PSI / KL-divergence of daily forecast distribution vs. training,"PSI > 0.2 warn, > 0.25 alert",Demand regime shift or upstream feature break
+Feature drift,"PSI per feature (esp. rolling_7d_avg, discount_pct, inventory_ratio)",PSI > 0.2 on any top-5 feature,Pricing strategy / assortment change
+Performance decay,Rolling 7-day WMAE once actuals land,WMAE > 5.0 (baseline level),Model no longer beats naive baseline — retrain
+Bias / calibration,Mean error (pred - actual) by discount tier & season,|mean bias| > 1.0 unit sustained,Systematic over/under-forecast in a segment
+Cold-start volume,Share of daily rows that are brand-new SKUs (0-30d),Share > training share + 15pp,Assortment refresh — validate cold-start error
+Data freshness,Max lag between event date and feature availability,> 24h,Upstream pipeline delay — forecasts stale
