@@ -1,0 +1,10 @@
+Model Progression & Results
+
+We evaluated a five-model ladder on a hold-out set of unseen SKUs (a cold-start test that
+mirrors launching new products). The final XGBoost Tweedie model reached a Weighted MAE of
+4.5165, a 17.9% improvement over the 7-day moving-average baseline
+(5.5031). The gains compound down the ladder: Random Forest (+10.8%)
+captures non-linear discount x lifecycle effects, the Poisson objective adds count-awareness
+(+16.3%), and the Tweedie objective edges it out further (+17.9%)
+by natively modelling the zero-inflated, spiky shape of markdown demand. WMAE weights errors by
+on-hand inventory, so the improvement is concentrated exactly where markdown dollars are at risk.

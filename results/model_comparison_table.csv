@@ -1,0 +1,6 @@
+Model,WMAE,MAE,RMSE,P50 Loss,P90 Loss,Improve vs Base %
+Baseline (7-day avg),5.5031,3.5809,10.3599,1.7904,1.7394,0.0
+Linear Regression,5.4589,3.7799,9.8644,1.8899,1.7779,0.8
+Random Forest,4.9098,3.2198,9.2066,1.6099,1.6144,10.8
+XGBoost Poisson,4.6052,3.0273,8.5956,1.5137,1.5678,16.3
+XGBoost Tweedie,4.5165,2.9692,8.5035,1.4846,1.5856,17.9
