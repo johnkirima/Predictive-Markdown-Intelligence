@@ -1,62 +1,107 @@
-🛒   #**Predictive Markdown Intelligence**
+# 🛒 Predictive Markdown Intelligence
 
-**End-to-End Machine Learning for Retail Demand Forecasting & Markdown Optimization
-Predicting SKU-level daily demand using synthetic retail data, feature engineering, and gradient boosted tree models to support smarter pricing and inventory decisions.**
+A production‑ready machine learning system for fast‑fashion markdown forecasting.  
+Built end‑to‑end with synthetic retail data, leakage‑safe feature engineering, XGBoost Tweedie modeling, SHAP interpretability, and a deployable scoring pipeline.
 
+---
 
+## 1. Problem
 
+Fast‑fashion SKUs die young. Demand is:
 
+- Zero‑inflated
+- Sparse
+- Volatile
+- Lifecycle‑driven
+- Discount‑sensitive
 
+Classical time‑series models collapse under these conditions.  
+This project builds a structured, feature‑driven forecasting system that handles:
 
-📖 #**Overview**
-**Retail markdown decisions are difficult because lowering prices increases demand while reducing margins***.
+- Cold‑start SKUs
+- Stock‑out noise
+- Short lifecycles
+- Mid‑range discount volatility
+- Pre‑markdown decision windows
 
-This project simulates a realistic fashion retail environment and develops an end-to-end machine learning pipeline that predicts daily SKU demand under different pricing conditions.
+---
 
-The final objective is to support better:
+## 2. What Worked
 
-📦 Inventory planning
-💰 Markdown timing
-📈 Demand forecasting
-🛍 Retail pricing decisions
+The features and modeling choices that moved the needle:
 
+| Feature / Choice | Why It Mattered |
+|---|---|
+| **Lifecycle position** | `days_since_launch` captured the launch → peak → decay arc |
+| **Velocity signals** | `rolling_7d_avg` + `lag_7_units_sold` modeled short‑term momentum |
+| **XGBoost Tweedie** | Handled zero‑inflation without a hurdle model |
+| **Leakage‑safe windows** | All features computed strictly before the prediction day |
+| **Weighted MAE (WMAE)** | Penalised errors on high‑value SKUs more than clearance items |
 
-# **🚀 Project Highlights**
+---
 
-**✅ Synthetic retail data generation**
+## 3. What Failed
 
-**✅ Leakage-free feature engineering**
+The dead ends — and why they died:
 
-**✅ Multiple baseline models**
+| Dead End | Reason |
+|---|---|
+| Long lag features (14–21 days) | Too noisy for short‑lifecycle SKUs |
+| Mid‑range discounts (21–40%) | Naturally volatile; model struggled here |
+| Early leakage | Draft features peeked past markdown events; pipeline rebuilt |
+| External signals | Sentiment / web trends added latency and noise; removed |
 
-**✅ XGBoost Tweedie optimization**
+---
 
-**✅ Error analysis**
+## 4. Tech & Evaluation
 
-**✅ Deployment-ready prediction pipeline**
+**Model Stack**
 
-**✅ Professional GitHub documentation**
+- XGBoost Tweedie
+- SHAP (per‑prediction attribution)
+- Gain‑based importance (global ranking)
+- SKU‑level holdout (true cold‑start testing)
 
-**🏗 Repository Structure**
+**Metrics**
 
+- `WMAE` — primary business metric
+- `Quantile loss` — tail behaviour
+- `MAE by segment` — lifecycle + discount diagnostics
 
+---
 
-#**Predictive-Markdown-Intelligence/**
+## 5. Dataset
 
+Synthetic retail dataset engineered for realism:
+
+- Zero‑inflated SKU‑day demand
+- Lifecycle curves
+- Seasonal patterns
+- Markdown events
+- Stock‑out noise
+- Cold‑start SKUs
+- Volatile mid‑range discounts
+
+Designed to replicate the failure modes of real fast‑fashion pipelines.
+
+---
+
+## 📁 Repository Structure
+
+```
+Predictive-Markdown-Intelligence/
 │
-├── data/
-│
-├── models/
-│
-├── results/
+├── data/                          # Synthetic retail dataset
+├── models/                        # Trained XGBoost Tweedie model + artifacts
+├── results/                       # SHAP plots, diagnostics, evaluation
 │
 ├── 01_baseline_models.ipynb
-├── 02_Linear_Regression.ipynb
-├── 03_Random_Forest.ipynb
-├── 04_XGBoost.ipynb
-├── 05_Predictions and Error Analysis.ipynb
-├── 06_EXECUTIVE_SUMMARY.ipynb
-├── 07_Deployment_Prep.ipynb
+├── 02_linear_regression.ipynb
+├── 03_random_forest.ipynb
+├── 04_xgboost_tweedie.ipynb
+├── 05_error_analysis.ipynb
+├── 06_feature_importance.ipynb
+├── 07_deployment_prep.ipynb
 │
 ├── build_modeling_table.py
 ├── config.py
@@ -67,136 +112,43 @@ The final objective is to support better:
 ├── visualize_data.py
 │
 └── README.md
+```
 
+---
 
-📊 # **Dataset**
+## 🚀 Deployment
 
+Deployment artifacts include:
 
-**The synthetic retail dataset contains approximately**
+- Trained XGBoost Tweedie model (`.pkl`)
+- Feature ordering contract
+- Preprocessing pipeline
+- Scoring function (`predict_demand()`)
 
+Ready for integration into:
 
-260,000+ SKU-Day observations
-180 Fashion SKUs
-2 Years of Daily Sales
-Multiple Product Categories
+- Batch scoring pipelines
+- FastAPI microservices
+- Markdown optimisation engines
 
+---
 
-**The data was intentionally designed to reproduce real retail characteristics including**
+## 💡 Business Value
 
-Zero-inflated demand
-Long-tail sales
-Price elasticity
-Markdown fatigue
-Seasonality
-Inventory constraints
-Product life cycle
-⚙ Feature Engineering
-Important features include
+A retailer using this system could:
 
-Rolling 7-day demand
-Lag features
-Discount percentage
-Markdown stage
-Inventory ratio
-Days until season end
-Days since launch
-Day of week
-Holiday indicators
-Future information leakage was removed before model training.
+- Reduce stockouts
+- Reduce overstocks
+- Improve markdown timing
+- Increase gross margin
+- Reduce inventory waste
+- Improve SKU‑level demand visibility
 
-🤖  # **Models**
+---
 
-The project compares several machine learning models.
+## 🧑‍💻 Author
 
-
-
-# **Model	Purpose**
-
-Linear Regression	Baseline
-Random Forest	Non-linear benchmark
-XGBoost	Gradient boosting
-XGBoost Poisson	Count prediction
-
-
-✅ # **XGBoost Tweedie	Final production model**
-
-
-
-📈 # **Final Model**
-The selected production model is
-
-✅ # **XGBoost Tweedie**
-
-
-Chosen because it naturally models
-
-Sparse demand
-Long-tail purchases
-Zero inflation
-Stable expected demand
-
-
-
-📉 # **Evaluation**
-
-
-Evaluation includes
-
-**RMSE
-MAE
-RMSLE
-Residual analysis
-SKU-level diagnostics
-Metric Scale
-The validation data is approximately 99.99% zero demand**.
-
-Therefore:
-
-_average demand is extremely small
-RMSE values appear numerically small
-metrics are reported on the original units sold scale
-This behavior is expected for highly sparse retail demand forecasting._****
-
-**🚀 Deployment
-Deployment artifacts include**
-
-
-trained Tweedie model
-feature ordering
-preprocessing pipeline
-The project also contains notebook-based deployment preparation for future API integration.
-
-
-**💡 Business Value
-A retailer using this system could**
-
-**reduce stockouts
-reduce overstocks
-improve markdown timing
-improve inventory allocation
-increase gross margin
-reduce inventory waste**__
-
-
-
-🔮 **Future Improvements**
-
-_SHAP Explainability
-FastAPI Deployment
-Docker Container
-Markdown Optimization Engine
-Reinforcement Learning Pricing
-Real Retail Data Validation__
-
-
-
-
-#**🧑‍💻 Author**
-
-
-**John Kirima**
-
-
-**Business Analytics & Information Systems**
-
-Machine Learning • Data Science • AI Engineering**
+**John Kirima**  
+Data Scientist · Machine Learning · AI Engineering  
+Iowa City, IA  
+[johkirima.com](https://www.johkirima.com)
