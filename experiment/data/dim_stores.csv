@@ -1,0 +1,101 @@
+store_id,store_name,market_region,store_tier,capacity_weight
+STORE_001,Great Lakes East Standard #001,Great_Lakes_East,Standard,0.859
+STORE_002,Plains North Boutique #002,Plains_North,Boutique,0.527
+STORE_003,Upper Midwest Standard #003,Upper_Midwest,Standard,0.944
+STORE_004,Central Valley Standard #004,Central_Valley,Standard,1.003
+STORE_005,Great Lakes East Flagship #005,Great_Lakes_East,Flagship,1.763
+STORE_006,Plains North Flagship #006,Plains_North,Flagship,1.5
+STORE_007,Upper Midwest Flagship #007,Upper_Midwest,Flagship,1.564
+STORE_008,Central Valley Boutique #008,Central_Valley,Boutique,0.551
+STORE_009,Great Lakes East Standard #009,Great_Lakes_East,Standard,0.919
+STORE_010,Plains North Standard #010,Plains_North,Standard,0.873
+STORE_011,Upper Midwest Flagship #011,Upper_Midwest,Flagship,1.516
+STORE_012,Central Valley Boutique #012,Central_Valley,Boutique,0.432
+STORE_013,Great Lakes East Boutique #013,Great_Lakes_East,Boutique,0.586
+STORE_014,Plains North Standard #014,Plains_North,Standard,1.092
+STORE_015,Upper Midwest Flagship #015,Upper_Midwest,Flagship,1.653
+STORE_016,Central Valley Flagship #016,Central_Valley,Flagship,1.749
+STORE_017,Great Lakes East Standard #017,Great_Lakes_East,Standard,1.091
+STORE_018,Plains North Standard #018,Plains_North,Standard,0.906
+STORE_019,Upper Midwest Standard #019,Upper_Midwest,Standard,1.118
+STORE_020,Central Valley Standard #020,Central_Valley,Standard,1.012
+STORE_021,Great Lakes East Standard #021,Great_Lakes_East,Standard,1.092
+STORE_022,Plains North Flagship #022,Plains_North,Flagship,1.758
+STORE_023,Upper Midwest Standard #023,Upper_Midwest,Standard,0.945
+STORE_024,Central Valley Standard #024,Central_Valley,Standard,0.883
+STORE_025,Great Lakes East Standard #025,Great_Lakes_East,Standard,0.918
+STORE_026,Plains North Standard #026,Plains_North,Standard,0.978
+STORE_027,Upper Midwest Flagship #027,Upper_Midwest,Flagship,1.727
+STORE_028,Central Valley Standard #028,Central_Valley,Standard,1.108
+STORE_029,Great Lakes East Standard #029,Great_Lakes_East,Standard,0.852
+STORE_030,Plains North Flagship #030,Plains_North,Flagship,1.604
+STORE_031,Upper Midwest Standard #031,Upper_Midwest,Standard,0.975
+STORE_032,Central Valley Flagship #032,Central_Valley,Flagship,1.489
+STORE_033,Great Lakes East Flagship #033,Great_Lakes_East,Flagship,1.448
+STORE_034,Plains North Boutique #034,Plains_North,Boutique,0.468
+STORE_035,Upper Midwest Boutique #035,Upper_Midwest,Boutique,0.589
+STORE_036,Central Valley Boutique #036,Central_Valley,Boutique,0.465
+STORE_037,Great Lakes East Standard #037,Great_Lakes_East,Standard,1.006
+STORE_038,Plains North Flagship #038,Plains_North,Flagship,1.681
+STORE_039,Upper Midwest Standard #039,Upper_Midwest,Standard,0.959
+STORE_040,Central Valley Standard #040,Central_Valley,Standard,1.142
+STORE_041,Great Lakes East Flagship #041,Great_Lakes_East,Flagship,1.785
+STORE_042,Plains North Standard #042,Plains_North,Standard,0.926
+STORE_043,Upper Midwest Flagship #043,Upper_Midwest,Flagship,1.599
+STORE_044,Central Valley Boutique #044,Central_Valley,Boutique,0.46
+STORE_045,Great Lakes East Standard #045,Great_Lakes_East,Standard,0.935
+STORE_046,Plains North Standard #046,Plains_North,Standard,0.861
+STORE_047,Upper Midwest Standard #047,Upper_Midwest,Standard,1.033
+STORE_048,Central Valley Standard #048,Central_Valley,Standard,1.001
+STORE_049,Great Lakes East Standard #049,Great_Lakes_East,Standard,0.865
+STORE_050,Plains North Flagship #050,Plains_North,Flagship,1.511
+STORE_051,Upper Midwest Boutique #051,Upper_Midwest,Boutique,0.582
+STORE_052,Central Valley Standard #052,Central_Valley,Standard,0.922
+STORE_053,Great Lakes East Boutique #053,Great_Lakes_East,Boutique,0.429
+STORE_054,Plains North Boutique #054,Plains_North,Boutique,0.498
+STORE_055,Upper Midwest Standard #055,Upper_Midwest,Standard,1.146
+STORE_056,Central Valley Boutique #056,Central_Valley,Boutique,0.448
+STORE_057,Great Lakes East Flagship #057,Great_Lakes_East,Flagship,1.669
+STORE_058,Plains North Flagship #058,Plains_North,Flagship,1.705
+STORE_059,Upper Midwest Flagship #059,Upper_Midwest,Flagship,1.495
+STORE_060,Central Valley Standard #060,Central_Valley,Standard,1.068
+STORE_061,Great Lakes East Standard #061,Great_Lakes_East,Standard,0.96
+STORE_062,Plains North Standard #062,Plains_North,Standard,1.04
+STORE_063,Upper Midwest Boutique #063,Upper_Midwest,Boutique,0.527
+STORE_064,Central Valley Standard #064,Central_Valley,Standard,1.011
+STORE_065,Great Lakes East Standard #065,Great_Lakes_East,Standard,0.877
+STORE_066,Plains North Standard #066,Plains_North,Standard,1.101
+STORE_067,Upper Midwest Flagship #067,Upper_Midwest,Flagship,1.528
+STORE_068,Central Valley Boutique #068,Central_Valley,Boutique,0.437
+STORE_069,Great Lakes East Flagship #069,Great_Lakes_East,Flagship,1.416
+STORE_070,Plains North Boutique #070,Plains_North,Boutique,0.518
+STORE_071,Upper Midwest Standard #071,Upper_Midwest,Standard,1.053
+STORE_072,Central Valley Flagship #072,Central_Valley,Flagship,1.407
+STORE_073,Great Lakes East Flagship #073,Great_Lakes_East,Flagship,1.605
+STORE_074,Plains North Boutique #074,Plains_North,Boutique,0.445
+STORE_075,Upper Midwest Standard #075,Upper_Midwest,Standard,1.044
+STORE_076,Central Valley Standard #076,Central_Valley,Standard,0.902
+STORE_077,Great Lakes East Standard #077,Great_Lakes_East,Standard,1.057
+STORE_078,Plains North Flagship #078,Plains_North,Flagship,1.555
+STORE_079,Upper Midwest Standard #079,Upper_Midwest,Standard,1.131
+STORE_080,Central Valley Flagship #080,Central_Valley,Flagship,1.455
+STORE_081,Great Lakes East Boutique #081,Great_Lakes_East,Boutique,0.468
+STORE_082,Plains North Standard #082,Plains_North,Standard,0.884
+STORE_083,Upper Midwest Standard #083,Upper_Midwest,Standard,1.127
+STORE_084,Central Valley Flagship #084,Central_Valley,Flagship,1.751
+STORE_085,Great Lakes East Standard #085,Great_Lakes_East,Standard,0.927
+STORE_086,Plains North Standard #086,Plains_North,Standard,1.048
+STORE_087,Upper Midwest Standard #087,Upper_Midwest,Standard,1.095
+STORE_088,Central Valley Standard #088,Central_Valley,Standard,1.017
+STORE_089,Great Lakes East Boutique #089,Great_Lakes_East,Boutique,0.506
+STORE_090,Plains North Standard #090,Plains_North,Standard,0.923
+STORE_091,Upper Midwest Flagship #091,Upper_Midwest,Flagship,1.437
+STORE_092,Central Valley Standard #092,Central_Valley,Standard,1.119
+STORE_093,Great Lakes East Standard #093,Great_Lakes_East,Standard,1.12
+STORE_094,Plains North Standard #094,Plains_North,Standard,1.04
+STORE_095,Upper Midwest Standard #095,Upper_Midwest,Standard,0.952
+STORE_096,Central Valley Standard #096,Central_Valley,Standard,0.955
+STORE_097,Great Lakes East Standard #097,Great_Lakes_East,Standard,1.068
+STORE_098,Plains North Standard #098,Plains_North,Standard,1.119
+STORE_099,Upper Midwest Flagship #099,Upper_Midwest,Flagship,1.755
+STORE_100,Central Valley Flagship #100,Central_Valley,Flagship,1.712
